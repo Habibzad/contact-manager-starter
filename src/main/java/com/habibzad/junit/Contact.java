@@ -1,16 +1,21 @@
-package com.programming.techie;
+package com.habibzad.junit;
 
 public class Contact {
+	/*Instance Variables */
     private String firstName;
     private String lastName;
     private String phoneNumber;
-
+	
+	/* Constructor
+	 * Takes first name, last name and phone number as parameters
+	 * */
     public Contact(String firstName, String lastName, String phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
     }
 
+    //Getters
     public String getFirstName() {
         return firstName;
     }
@@ -19,6 +24,7 @@ public class Contact {
         return lastName;
     }
 
+    //Validations
     public void validateFirstName() {
         if (this.firstName.isBlank())
             throw new RuntimeException("First Name Cannot be null or empty");
@@ -44,5 +50,11 @@ public class Contact {
             throw new RuntimeException("Phone Number Should Start with 0");
         }
     }
+    
+    @Override
+    public String toString() {
+    	return "Name: "+firstName+" "+ lastName + " Phone Number: "+phoneNumber;
+    }
+  
 }
 

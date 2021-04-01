@@ -1,4 +1,4 @@
-package com.programming.techie;
+package com.habibzad.junit;
 
 import java.util.Collection;
 import java.util.Map;
